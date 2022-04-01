@@ -1,6 +1,8 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
 import Home from '../views/Home.vue'
+import Demo from '../views/Demo.vue'
+import Pokemon from '../views/PokemonDetail.vue'
 
 Vue.use(VueRouter)
 
@@ -11,6 +13,17 @@ const routes = [
     component: Home
   },
   {
+    path: '/pokemon/:id',
+    name: Pokemon,
+    component: Pokemon
+  },
+
+  {
+    path: '/demo', 
+    name: 'Demo',
+    component: Demo
+  },
+    {
     path: '/about',
     name: 'About',
     // route level code-splitting
