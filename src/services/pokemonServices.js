@@ -14,7 +14,7 @@ export class PokemonService {
                 let pokeName = response.data.name;
                 let pokeWeight = response.data.weight;
                 let pokeHeight = response.data.height;
-                let pokeGif = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/versions/generation-v/black-white/animated/' + id + '.gif';
+                let pokeGif = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/' + id + '.png';
 
                 let result = new Pokemon(
                    id, pokeName, pokeHeight, pokeWeight, pokeArr, pokeGif
@@ -61,7 +61,8 @@ export class PokemonService {
                     p.image = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/" + id + ".png";
                     pokemons.push(p);
                 });
-
+                console.log(response.data.sprites
+);
 
                 resolve(pokemons)
             })
