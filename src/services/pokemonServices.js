@@ -35,15 +35,9 @@ export class PokemonService {
             });
 
 
-
-
-            
         })
 
     }
-
-
-
 
     getPokemons() {
         return new Promise((resolve, reject) => {
